@@ -1,18 +1,22 @@
 # Intro to JS
 
 ## By the end of this lesson, you should be able to:
+
 Manipulate the DOM using JavaScript!
 
 ## But Why?
+
 JavaScript is the universal language of the web (on the frontend). It allows us to quickly update the appearance of a webpage without refreshing it.
 
 ### LGs:
+
 - [ ] Explain the difference between front- and backend
 - [ ] Explain what the DOM is
 - [ ] Mutate the DOM and its styles using JavaScript
 - [ ] Create new DOM nodes and append them
 
 ### What is the difference between the front and backend?
+
 Frontend:
 * Users can see and interact with it
 * Downloaded by the browser after making a successful HTTP request
@@ -27,6 +31,7 @@ Backend:
 * May include a database
 
 ### What is the DOM? How is it structured?
+
 Volunteer please.
 
 - The DOM (Document Object Model) is a representation of an HTML document as a **tree** that can be manipulated with JavaScript
@@ -37,6 +42,7 @@ Volunteer please.
 ![](pic_htmltree.gif)
 
 ### Mutate the DOM and its styles using JavaScript
+
 - Let's use Dev Tools to traverse the DOM and identify elements
 - Let's update the text in the h1 using Dev Tools
 - Change that same text again using Dev Tools
@@ -71,6 +77,7 @@ Volunteer please.
 #### TASK: Display `cat.gif` image on screen.
 
 ### Wrap Up: You tell me what to do
+
 Tell me how to:
 - Grab and store the paragraph before the UL
 - Change it's text content
