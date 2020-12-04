@@ -56,3 +56,38 @@ document.querySelectorAll("p");
 // The output in the console won't look like that, but it's clearer than NodeList(3)[p, p, p]
 // which is closer to what you'll see
 ```
+
+## Changing an element's contents
+
+Let's replace the contents of an HTML element first. For this example, assume that `p` is storing a paragraph from the DOM.
+
+```
+p.textContent = "I'll replace the paragraph's text.";
+p.innerText = "I'll replace the paragraph's text also.";
+p.innerHTML = "I'll replace the contents, but I also support HTML. <p>Look, I'm a whole extra paragraph!</p>";
+```
+
+Let's add new elements to the DOM without removing anything:
+
+```
+const newParagraph = document.createElement('p');
+
+newParagraph.textContent = "I'm shiny and new, but I'm not in the DOM yet. I'm just floating around.";
+// This next line will add the paragraph as the last element in the DOM, and inside body
+document.body.appendChild(newParagraph);
+=> returns the newParagraph
+
+const div1 = document.createElement('div');
+const div2 = document.createElement('div');
+
+div1.textContent = "Please add me to the DOM first.";
+div2.textContent = "Just put me in the DOM OK.";
+
+// This adds both divs to the body element
+document.body.append(div1, div2);
+=> returns undefined
+```
+
+`appendChild()` appends one element to an element in the DOM, and then returns it. It only works with Node objects, i.e. the HTML elements we're used to, such as divs and paragraphs and list items, etc.
+
+`append()` appends one or more elements to an element in the DOM. It returns `undefined`. You can also append bare text (DOMString objects): `document.body.append("heyoo");`
